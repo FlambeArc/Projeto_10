@@ -18,7 +18,7 @@
 /*Header do meu site*/
 header{
     background-image: url('../Imagens/background2.jpg');
-    min-height: 600px;
+    min-height: 450px;
     padding: 30px 0;
     background-size: cover;
     background-position: center;
@@ -32,10 +32,49 @@ header{
     height: 100px;
     position: relative;
     top: -40px;
+    z-index: 2;
 }
 
 nav.desktop{
     float: right;
+}
+
+nav.mobile{
+    display: none;
+    float: right;
+}
+
+nav.mobile ul{
+    display: none;
+    background: #31475e;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 70px 0 30px 0;
+    width: 100%;
+    text-align: center;
+}
+
+nav.mobile h3{
+    color: white;
+    cursor: pointer;
+    font-size: 26px;
+    position: relative;
+    z-index: 2;
+}
+
+nav.mobile li{
+    padding: 10px 0;
+}
+
+nav.mobile li.btn-nav{
+    display: inline-block;
+    padding: 4px 10px;
+}
+
+nav.mobile a{
+    color: white;
+    text-decoration: none;
 }
 
 nav.desktop ul{
@@ -52,7 +91,7 @@ nav.desktop a{
     text-decoration: none;
 }
 
-nav.desktop li.btn-nav{
+nav li.btn-nav{
     padding: 3px 8px;
     border-radius: 20px;
     border: 1px solid white;
@@ -101,4 +140,39 @@ div.chamada input[type=submit]{
     color: white;
     cursor: pointer;
     border: 0;
+}
+
+section.descricao{
+    text-align: center;
+    padding: 30px 0;
+}
+
+section.descricao p{
+    font-weight: lighter;
+    font-size: 22px;
+    font-style: italic;
+    display: inline-block;
+    max-width: 680px;
+}
+
+@media screen and (max-width: 1024px){
+    nav.desktop{
+        display: none;
+    }
+
+    nav.mobile{
+        display: block;
+    }
+
+    div.chamada{
+        text-align: center;
+    }
+
+    div.chamada input[type=email]{
+        margin-bottom: 10px;
+    }
+
+    div.chamada p{
+        display: inline-block;
+    }
 }

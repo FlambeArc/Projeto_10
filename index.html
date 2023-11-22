@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
     <title>Projeto 10</title>
@@ -19,7 +20,16 @@
                         <li><a href="">Contato</a></li>
                         <li class="btn-nav"><a href="">Quero um orçamento</a></li>
                     </ul>
-                </nav>
+                </nav><!--desktop-->
+                <nav class="mobile">
+                    <h3><i class="fa fa-bars"></i></h3>
+                    <ul>
+                        <li><a href="">Sobre</a></li>
+                        <li><a href="">Serviços</a></li>
+                        <li><a href="">Contato</a></li>
+                        <li class="btn-nav"><a href="">Quero um orçamento</a></li>
+                    </ul>
+                </nav><!--mobile-->
                 <div class="clear"></div>
             </div><!--menu-topo-->
             <div class="chamada">
@@ -32,5 +42,17 @@
             </div>
         </div><!--container-->
     </header>
+    <section class="descricao">
+        <div class="container">
+            <p>Com anos de experiência em desenvolvimento web e automação de marketing, a <b>DankiCode</b> traz soluções que ajudam o seu time a vender mais tanto em segmentos B2C quanto B2B</p>
+        </div><!--container-->
+    </section>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="JS/jquery.js"></script>
+    <script>
+        $('nav.mobile h3').click(function(){
+            $('nav.mobile').find('ul').slideToggle();
+        })
+    </script>
 </body>
 </html>
